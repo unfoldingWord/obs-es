@@ -1624,13 +1624,59 @@
     {
       "frames": [
         {
-          "id": null, 
-          "img": null, 
-          "text": "Invalid format."
+          "id": "23-01", 
+          "img": "{{:en:obs:obs-23-01.jpg?nolink&640x360}}", 
+          "text": "Jos\u00e9 era una persona justa. Cuando oy\u00f3 que Mar\u00eda estaba embarazada, supo que no era su hijo. \u00c9l no quer\u00eda avergonzarla, as\u00ed que plane\u00f3 divorciarse de ella en secreto. Antes de poder hacerlo, un \u00e1ngel se le apareci\u00f3 en un sue\u00f1o."
+        }, 
+        {
+          "id": "23-02", 
+          "img": "{{:en:obs:obs-23-02.jpg?nolink&640x360}}", 
+          "text": "El \u00e1ngel dijo: \u201cJos\u00e9, no tengas miedo de tomar a Mar\u00eda por esposa. Lo que hay en ella es por el Esp\u00edritu Santo. Dar\u00e1 a luz un hijo. Ll\u00e1male Jes\u00fas, porque salvar\u00e1 a la gente de sus pecados.\u201d"
+        }, 
+        {
+          "id": "23-03", 
+          "img": "{{:en:obs:obs-23-03.jpg?nolink&640x360}}", 
+          "text": "Jos\u00e9, pues, se cas\u00f3 con ella y la llev\u00f3 a su casa como esposa, pero no se acost\u00f3 con ella hasta que no dio a luz."
+        }, 
+        {
+          "id": "23-04", 
+          "img": "{{:en:obs:obs-23-04.jpg?nolink&640x360}}", 
+          "text": "Estando cercano el tiempo en que Mar\u00eda iba a dar a luz, el gobierno romano orden\u00f3 que todo el mundo fuera a su lugar de origen para censarse. Mar\u00eda y Jos\u00e9 ten\u00edan que hacer un largo viaje desde donde viv\u00edan en Nazaret hasta Bel\u00e9n, porque su antecesor era David cuyo lugar de origen era Bel\u00e9n."
+        }, 
+        {
+          "id": "23-05", 
+          "img": "{{:en:obs:obs-23-05.jpg?nolink&640x360}}", 
+          "text": "Cuando llegaron a Bel\u00e9n, no hab\u00eda lugar donde quedarse. La \u00fanica estancia que pudieron encontrar fue un lugar donde los animales dorm\u00edan. El beb\u00e9 naci\u00f3 all\u00ed y su madre le acost\u00f3 en un pesebre, ya que no ten\u00edan una cama para \u00e9l. Le pusieron por nombre Jes\u00fas."
+        }, 
+        {
+          "id": "23-06", 
+          "img": "{{:en:obs:obs-23-06.jpg?nolink&640x360}}", 
+          "text": "Esa noche hab\u00eda unos cuantos pastores en los campos cercanos cuidando sus reba\u00f1os. De repente, un \u00e1ngel brillante se les apareci\u00f3, y quedaron aterrorizados. El \u00e1ngel dijo: \u201cNo teng\u00e1is miedo, porque tengo buenas noticias para vosotros. \u00a1El Mes\u00edas, el Maestro, ha nacido en Bel\u00e9n!\u201d"
+        }, 
+        {
+          "id": "23-07", 
+          "img": "{{:en:obs:obs-23-07.jpg?nolink&640x360}}", 
+          "text": "\u201cId a buscar al ni\u00f1o, le encontrar\u00e9is envuelto en pa\u00f1ales y acostado en un pesebre.\u201d De repente, los cielos se llenaron de \u00e1ngeles cantando y alabando a Dios, diciendo: \u201cGloria a Dios en el cielo y paz en la tierra a las personas que \u00c9l escoge!\u201d"
+        }, 
+        {
+          "id": "23-08", 
+          "img": "{{:en:obs:obs-23-08.jpg?nolink&640x360}}", 
+          "text": "Cuando llegaron los pastores al lugar donde estaba Jes\u00fas, le encontraron tumbado en un pesebre, tal como el \u00e1ngel les hab\u00eda dicho. Estaban muy nerviosos. Mar\u00eda tambi\u00e9n estaba muy feliz. Los pastores regresaron a los campos, alabando a Dios por todas las cosas que hab\u00edan visto y o\u00eddo."
+        }, 
+        {
+          "id": "23-09", 
+          "img": "{{:en:obs:obs-23-09.jpg?nolink&640x360}}", 
+          "text": "Un tiempo m\u00e1s tarde, unos sabios de pa\u00edses lejanos del este vieron una estrella extraordinaria en el cielo. Se dieron cuenta de que eso significaba que hab\u00eda nacido un nuevo rey de los jud\u00edos. As\u00ed que viajaron una gran distancia para ver a ese rey. Llegaron a Bel\u00e9n y encontraron el lugar donde Jes\u00fas viv\u00eda."
+        }, 
+        {
+          "id": "23-10", 
+          "img": "{{:en:obs:obs-23-10.jpg?nolink&640x360}}", 
+          "text": "Cuando vieron a Jes\u00fas con su madre, se postraron y le adoraron. Le dieron a Jes\u00fas regalos muy caros. Luego regresaron a sus casas."
         }
       ], 
       "number": "23", 
-      "title": "23. El Nacimiento de Jes\u00fas"
+      "ref": "Una historia de la Biblia en: Mateo 1; Lucas 2", 
+      "title": "23. El Nacimiento de Jes\u00fas "
     }, 
     {
       "frames": [
