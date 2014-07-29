@@ -1,15 +1,15 @@
 {
   "app_words": {
-    "cancel": "Cancel", 
-    "chapters": "Chapters", 
-    "languages": "Languages", 
-    "next_chapter": "Next Chapter", 
+    "cancel": "Cancelar.", 
+    "chapters": "Cap\u00edtulos", 
+    "languages": "Idiomas", 
+    "next_chapter": "Siguiente cap\u00edtulo", 
     "ok": "OK", 
-    "remove_locally": "Remove Locally", 
-    "remove_this_string": "Remove this language from offline storage. You will need an internet connection to view it in the future.", 
-    "save_locally": "Save Locally", 
-    "save_this_string": "Save this language locally for offline use.", 
-    "select_a_language": "Select a Language"
+    "remove_locally": "Borrar del dispositivo.", 
+    "remove_this_string": "Borrar este idioma del almacenamiento del dispositivo. Necesitar\u00e1 una conexi\u00f3n a internet para verlo posteriormente.", 
+    "save_locally": "Guardar en el dispositivo.", 
+    "save_this_string": "Grabar este idioma en el dispositivo para usar sin conexi\u00f3n.", 
+    "select_a_language": "Seleccione un idioma"
   }, 
   "chapters": [
     {
@@ -22,7 +22,7 @@
         {
           "id": "01-02", 
           "img": "{{:en:obs:obs-01-02.jpg?nolink&640x360}}", 
-          "text": "Entonces Dios habl\u00f3 y dijo: \"H\u00e1gase la luz!\" Y se hizo la luz. Y vio Dios que la luz era buena y la llam\u00f3 \"d\u00eda\". La separ\u00f3 de las tinieblas, a las que llam\u00f3 \"noche\". Dios cre\u00f3 la luz en el primer d\u00eda de la creaci\u00f3n."
+          "text": "Entonces Dios habl\u00f3 y dijo: \"\u200bH\u00e1gase la luz!\" Y se hizo la luz. Y vio Dios que la luz era buena y la llam\u00f3 \"\u200bd\u00eda\"\u200b. La separ\u00f3 de las tinieblas, a las que llam\u00f3 \"\u200bnoche\"\u200b. Dios cre\u00f3 la luz en el primer d\u00eda de la creaci\u00f3n."
         }, 
         {
           "id": "01-03", 
@@ -32,17 +32,17 @@
         {
           "id": "01-04", 
           "img": "{{:en:obs:obs-01-04.jpg?nolink&640x360}}", 
-          "text": "Dios vio que lo que todo lo que hab\u00eda creado era bueno. En el tercer d\u00eda, Dios habl\u00f3 y separ\u00f3 las aguas de la tierra seca. A lo seco llam\u00f3 \"tierra\", y a las aguas \"mares\". Y vio Dios que lo que hab\u00eda creado era bueno."
+          "text": "Dios vio que lo que todo lo que hab\u00eda creado era bueno. \u200bEn el tercer d\u00eda, Dios habl\u00f3 y separ\u00f3 las aguas de la tierra seca. A lo seco llam\u00f3 \"tierra\", y a las aguas \"mares\". Dios vio que lo que hab\u00eda creado era bueno."
         }, 
         {
           "id": "01-05", 
           "img": "{{:en:obs:obs-01-05.jpg?nolink&640x360}}", 
-          "text": "Entonces dijo Dios: \"Produzca la tierra toda clase de \u00e1rboles y plantas.\" Y as\u00ed sucedi\u00f3. Vio Dios que todo lo que hab\u00eda creado era bueno."
+          "text": "Entonces Dios dijo: \"Que la tierra produzca toda clase de \u00e1rboles y plantas\". Y as\u00ed sucedi\u00f3. Dios vio que todo lo que hab\u00eda creado era bueno."
         }, 
         {
           "id": "01-06", 
           "img": "{{:en:obs:obs-01-06.jpg?nolink&640x360}}", 
-          "text": "En el cuarto d\u00eda de la creaci\u00f3n, Dios habl\u00f3 y cre\u00f3 el sol, la luna y las estrellas. Dios los hizo para dar luz a la tierra y para diferenciar entre el d\u00eda y la noche, las estaciones y los a\u00f1os. Y vio Dios que lo que hab\u00eda creado era bueno."
+          "text": "En el cuarto d\u00eda de la creaci\u00f3n, Dios habl\u00f3 y cre\u00f3 el sol, la luna y las estrellas. Dios los hizo para dar luz a la tierra y para diferenciar entre el d\u00eda y la noche, las estaciones y los a\u00f1os. Y Dios vio que lo que hab\u00eda creado era bueno."
         }, 
         {
           "id": "01-07", 
@@ -52,17 +52,17 @@
         {
           "id": "01-08", 
           "img": "{{:en:obs:obs-01-08.jpg?nolink&640x360}}", 
-          "text": "En el sexto d\u00eda de la creaci\u00f3n, Dios dijo: \"H\u00e1ganse todo tipo de animales terrestres!\" Y sucedi\u00f3 tal como Dios dijo. Unos eran animales de granja, otros se arrastraban por el suelo, y otros eran salvajes. Y vio Dios que era bueno."
+          "text": "En el sexto d\u00eda de la creaci\u00f3n, Dios dijo: \"\u00a1H\u00e1ganse todo tipo de animales terrestres!\" Y sucedi\u00f3 tal como Dios dijo. Unos eran animales de granja, otros se arrastraban por el suelo, y otros eran salvajes. Y Dios vio que era bueno."
         }, 
         {
           "id": "01-09", 
           "img": "{{:en:obs:obs-01-09.jpg?nolink&640x360}}", 
-          "text": "Entonces dijo Dios: \"Hagamos al ser humano a nuestra imagen para que sea como nosotros. Tendr\u00e1 autoridad sobre la tierra y todos los animales.\""
+          "text": "Entonces dijo Dios: \"Hag\u00e1mos a los seres humanos a nuestra imagen para que sean como nosotros. Tendr\u00e1n autoridad sobre la tierra y todos los animales.\""
         }, 
         {
           "id": "01-10", 
           "img": "{{:en:obs:obs-01-10.jpg?nolink&640x360}}", 
-          "text": "As\u00ed que Dios tom\u00f3 un poco de tierra, la dio forma de hombre, y sopl\u00f3 vida en \u00e9l. El nombre de este hombre era Ad\u00e1n. Dios plant\u00f3 un jard\u00edn donde Ad\u00e1n pod\u00eda vivir, y lo puso all\u00ed para que cuidara de \u00e9l."
+          "text": "As\u00ed que Dios tom\u00f3 un poco de tierra, le dio forma de hombre, y sopl\u00f3 vida en \u00e9l. El nombre de este hombre era Ad\u00e1n. Dios plant\u00f3 un jard\u00edn donde Ad\u00e1n pudiera vivir, y lo puso all\u00ed para que cuidara de \u00e9l."
         }, 
         {
           "id": "01-11", 
@@ -97,7 +97,7 @@
       ], 
       "number": "01", 
       "ref": "Una historia de la Biblia en: Genesis 1-2", 
-      "title": "1.- La Creaci\u00f3n"
+      "title": "1. La Creaci\u00f3n"
     }, 
     {
       "frames": [
@@ -591,11 +591,6 @@
           "text": "Cuando Mois\u00e9s pens\u00f3 que no le ve\u00eda nadie, mat\u00f3 al egipcio y enterrr\u00f3 su cuerpo. Pero alguien vio lo que hab\u00eda sucedido."
         }, 
         {
-          "id": "09-09", 
-          "img": "{{:en:obs:obs-09-09.jpg?nolink&640x360}}", 
-          "text": "Cuando Mois\u00e9s pens\u00f3 que no le ve\u00eda nadie, mat\u00f3 al egipcio y enterrr\u00f3 su cuerpo. Pero alguien vio lo que hab\u00eda sucedido."
-        }, 
-        {
           "id": "09-10", 
           "img": "{{:en:obs:obs-09-10.jpg?nolink&640x360}}", 
           "text": "Cuando el Fara\u00f3n se enter\u00f3, intent\u00f3 matar a Mois\u00e9s por lo que hab\u00eda hecho. Mois\u00e9s huy\u00f3 de Egipto hacia el desierto donde estar\u00eda a salvo de los soldados del Fara\u00f3n."
@@ -640,12 +635,7 @@
         {
           "id": "10-02", 
           "img": "{{:en:obs:obs-10-02.jpg?nolink&640x360}}", 
-          "text": "Fara\u00f3n sigui\u00f3 neg\u00e1ndose a dejar ir al pueblo, por lo que Dios envi\u00f3 diez terribles plagas a Egipto. Por medio de esas plagas, Dios ense\u00f1o al Fara\u00f3n que era m\u00e1s poderoso que Fara\u00f3n y que todos los dioses de Egipto."
-        }, 
-        {
-          "id": "10-02", 
-          "img": "{{:en:obs:obs-10-02.jpg?nolink&640x360}}", 
-          "text": "Fara\u00f3n sigui\u00f3 neg\u00e1ndose a dejar ir al pueblo, por lo que Dios envi\u00f3 diez terribles plagas a Egipto. Por medio de esas plagas, Dios ense\u00f1o al Fara\u00f3n que era m\u00e1s poderoso que Fara\u00f3n y que todos los dioses de Egipto."
+          "text": "Pharaoh kept refusing to let the people go, so God sent ten terrible plagues, on Egypt. Through these plagues, God showed Pharaoh that he is more powerful than Pharaoh and all of Egypt\u2019s gods. Fara\u00f3n sigui\u00f3 neg\u00e1ndose a dejar ir al pueblo, por lo que Dios envi\u00f3 diez terribles plagas a Egipto. Por medio de esas plagas, Dios ense\u00f1o al Fara\u00f3n que era m\u00e1s poderoso que Fara\u00f3n y que todos los dioses de Egipto."
         }, 
         {
           "id": "10-03", 
@@ -695,12 +685,7 @@
         {
           "id": "10-12", 
           "img": "{{:en:obs:obs-10-12.jpg?nolink&640x360}}", 
-          "text": "Incluso despu\u00e9s de esas nueve plagas, Fara\u00f3n todav\u00eda se negaba dejar libres a los israelitas. Dado que Fara\u00f3n no quer\u00eda escuchar, Dios prepar\u00f3 una \u00faltima plaga. Esto cambiar\u00eda la forma de pensar del Fara\u00f3n."
-        }, 
-        {
-          "id": "10-12", 
-          "img": "{{:en:obs:obs-10-12.jpg?nolink&640x360}}", 
-          "text": "Incluso despu\u00e9s de esas nueve plagas, Fara\u00f3n todav\u00eda se negaba dejar libres a los israelitas. Dado que Fara\u00f3n no quer\u00eda escuchar, Dios prepar\u00f3 una \u00faltima plaga. Esto cambiar\u00eda la forma de pensar del Fara\u00f3n."
+          "text": "Even after these nine plagues, Pharaoh still refused to let the Israelites go free. Since Pharaoh would not listen, God planned to send one last plague. This would change Pharaoh\u2019s mind. Incluso despu\u00e9s de esas nueve plagas, Fara\u00f3n todav\u00eda se negaba dejar libres a los israelitas. Dado que Fara\u00f3n no quer\u00eda escuchar, Dios prepar\u00f3 una \u00faltima plaga. Esto cambiar\u00eda la forma de pensar del Fara\u00f3n."
         }
       ], 
       "number": "10", 
@@ -968,12 +953,7 @@
         {
           "id": "14-11", 
           "img": "{{:en:obs:obs-14-11.jpg?nolink&640x360}}", 
-          "text": "Durante este tiempo de viaje, Dios les dio provision. Les dio pan del cielo, llamado \u201cman\u00e1.\u201d Tambi\u00e9n envi\u00f3 codornices (un tipo de ave) a su campamento para que pudieran tener carne que comer. Durante esos cuarenta a\u00f1os, Dios guard\u00f3 sus vestidos y sus calzados de modo que no se desgastasen."
-        }, 
-        {
-          "id": "14-11", 
-          "img": "{{:en:obs:obs-14-11.jpg?nolink&640x360}}", 
-          "text": "Durante este tiempo de viaje, Dios les dio provision. Les dio pan del cielo, llamado \u201cman\u00e1.\u201d Tambi\u00e9n envi\u00f3 codornices (un tipo de ave) a su campamento para que pudieran tener carne que comer. Durante esos cuarenta a\u00f1os, Dios guard\u00f3 sus vestidos y sus calzados de modo que no se desgastasen."
+          "text": "During that time of wandering, God provided for them. He gave them bread from heaven, called \u201cmanna.\u201d He also sent quail (which is a kind of bird) into their camp so they could have meat to eat. During those forty years, God kept their clothes and shoes from wearing out.Durante este tiempo de viaje, Dios les dio provision. Les dio pan del cielo, llamado \u201cman\u00e1.\u201d Tambi\u00e9n envi\u00f3 codornices (un tipo de ave) a su campamento para que pudieran tener carne que comer. Durante esos cuarenta a\u00f1os, Dios guard\u00f3 sus vestidos y sus calzados de modo que no se desgastasen."
         }, 
         {
           "id": "14-12", 
@@ -988,12 +968,7 @@
         {
           "id": "14-14", 
           "img": "{{:en:obs:obs-14-14.jpg?nolink&640x360}}", 
-          "text": "Despu\u00e9s de que los israelitas erraran por el desierto durante cuarenta a\u00f1os, toda la gente que se hab\u00eda rebelado contra Dios muri\u00f3. Dios llev\u00f3 a los israelitas a la frontera con la Tierra Prometida otra vez. Mois\u00e9s era ahora muy viejo, as\u00ed que escogi\u00f3 a Josu\u00e9 para ayudarle a liderar al pueblo. Dios prometi\u00f3 a Mois\u00e9s que un d\u00eda levantar\u00eda un profeta como Mois\u00e9s."
-        }, 
-        {
-          "id": "14-14", 
-          "img": "{{:en:obs:obs-14-14.jpg?nolink&640x360}}", 
-          "text": "Despu\u00e9s de que los israelitas erraran por el desierto durante cuarenta a\u00f1os, toda la gente que se hab\u00eda rebelado contra Dios muri\u00f3. Dios llev\u00f3 a los israelitas a la frontera con la Tierra Prometida otra vez. Mois\u00e9s era ahora muy viejo, as\u00ed que escogi\u00f3 a Josu\u00e9 para ayudarle a liderar al pueblo. Dios prometi\u00f3 a Mois\u00e9s que un d\u00eda levantar\u00eda un profeta como Mois\u00e9s."
+          "text": "After the Israelites had wandered in the wilderness for forty years, all the people who had rebelled against God were dead. Then God led the people to the edge of the Promised Land again. Moses was now very old, so he chose Joshua to help him lead the people. God promised Moses that one day he would raise up another prophet like Moses.Despu\u00e9s de que los israelitas erraran por el desierto durante cuarenta a\u00f1os, toda la gente que se hab\u00eda rebelado contra Dios muri\u00f3. Dios llev\u00f3 a los israelitas a la frontera con la Tierra Prometida otra vez. Mois\u00e9s era ahora muy viejo, as\u00ed que escogi\u00f3 a Josu\u00e9 para ayudarle a liderar al pueblo. Dios prometi\u00f3 a Mois\u00e9s que un d\u00eda levantar\u00eda un profeta como Mois\u00e9s."
         }, 
         {
           "id": "14-15", 
@@ -1599,12 +1574,7 @@
         {
           "id": "22-05", 
           "img": "{{:en:obs:obs-22-05.jpg?nolink&640x360}}", 
-          "text": "Mar\u00eda crey\u00f3 y acept\u00f3 lo que el \u00e1ngel dijo."
-        }, 
-        {
-          "id": "22-05", 
-          "img": "{{:en:obs:obs-22-05.jpg?nolink&640x360}}", 
-          "text": "Mar\u00eda crey\u00f3 y acept\u00f3 lo que el \u00e1ngel dijo."
+          "text": "Maria contest\u00f3: \u201c\u00bfC\u00f3mo puede ser eso, puesto que soy virgen?\u201d El angel le explic\u00f3: \u201cEl Esp\u00edritu Santo vendr\u00e1 sobre t\u00ed y el poder de Dios te cubrir\u00e1. Por eso tu hijo ser\u00e1 santo, el Hijo del Dios Alt\u00edsimo.\u201dMar\u00eda crey\u00f3 y acept\u00f3 lo que el \u00e1ngel dijo."
         }, 
         {
           "id": "22-06", 
@@ -1676,7 +1646,7 @@
       ], 
       "number": "23", 
       "ref": "Una historia de la Biblia en: Mateo 1; Lucas 2", 
-      "title": "23. El Nacimiento de Jes\u00fas "
+      "title": "23. El Nacimiento de Jes\u00fas"
     }, 
     {
       "frames": [
@@ -1931,12 +1901,7 @@
         {
           "id": "28-07", 
           "img": "{{:en:obs:obs-28-07.jpg?nolink&640x360}}", 
-          "text": "Cuando los disc\u00edpulos oyeron esto se sorprendieron y dijeron: \"Entonces, \u00bfqui\u00e9n podr\u00e1 salvarse?\""
-        }, 
-        {
-          "id": "28-07", 
-          "img": "{{:en:obs:obs-28-07.jpg?nolink&640x360}}", 
-          "text": "Cuando los disc\u00edpulos oyeron esto se sorprendieron y dijeron: \"Entonces, \u00bfqui\u00e9n podr\u00e1 salvarse?\""
+          "text": "When the disciples heard this they were shocked and said, \u201cThen who can be saved?\u201dCuando los disc\u00edpulos oyeron esto se sorprendieron y dijeron: \"Entonces, \u00bfqui\u00e9n podr\u00e1 salvarse?\""
         }, 
         {
           "id": "28-08", 
@@ -3243,12 +3208,7 @@
         {
           "id": "49-09", 
           "img": "{{:en:obs:obs-49-09.jpg?nolink&640x360}}", 
-          "text": "obs-49-08.jpg"
-        }, 
-        {
-          "id": "49-09", 
-          "img": "{{:en:obs:obs-49-09.jpg?nolink&640x360}}", 
-          "text": "obs-49-08.jpg"
+          "text": "Pero Dios am\u00f3 tanto al mundo que dio a Su \u00fanico hijo, Jes\u00fas, para que todo aquel que cree en \u00c9l no ir\u00e1 al infierno sino que vivir\u00e1 con \u00c9l para siempre.obs-49-08.jpg"
         }, 
         {
           "id": "49-10", 
@@ -3393,7 +3353,7 @@
       "title": "50. Jes\u00fas regresa"
     }
   ], 
-  "date_modified": "20140424", 
+  "date_modified": "20140729", 
   "direction": "ltr", 
   "language": "es"
 }
