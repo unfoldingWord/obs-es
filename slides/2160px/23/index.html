@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>23. El Nacimiento de Jesús</h1><h3>Una historia de la Biblia en: Mateo 1; Lucas 2</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>23. El Nacimiento de Jesús</h1><h3>Una historia de la Biblia en: Mateo 1; Lucas 2</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-23-01.jpg"><p>José era una persona justa. Cuando oyó que María estaba embarazada, supo que no era su hijo. Él no quería avergonzarla, así que planeó divorciarse de ella en secreto. Antes de poder hacerlo, un ángel se le apareció en un sueño.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-23-02.jpg"><p>El ángel dijo: “José, no tengas miedo de tomar a María por esposa. Lo que hay en ella es por el Espíritu Santo. Dará a luz un hijo. Llámale Jesús, porque salvará a la gente de sus pecados.”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-23-03.jpg"><p>José, pues, se casó con ella y la llevó a su casa como esposa, pero no se acostó con ella hasta que no dio a luz.</p></section>
@@ -106,13 +105,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-23-09.jpg"><p>Un tiempo más tarde, unos sabios de países lejanos del este vieron una estrella extraordinaria en el cielo. Se dieron cuenta de que eso significaba que había nacido un nuevo rey de los judíos. Así que viajaron una gran distancia para ver a ese rey. Llegaron a Belén y encontraron el lugar donde Jesús vivía.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-23-10.jpg"><p>Cuando vieron a Jesús con su madre, se postraron y le adoraron. Le dieron a Jesús regalos muy caros. Luego regresaron a sus casas.</p></section>
 <section><a href="../24/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>24. Juan bautiza a Jesús</h1><h3>Una historia de la Biblia de: Mateo 3; Marcos 1:9-11; Lucas 3:1-23</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>24. Juan bautiza a Jesús</h1><h3>Una historia de la Biblia de: Mateo 3; Marcos 1:9-11; Lucas 3:1-23</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-01.jpg"><p>Cuando Juan creció se convirtió en profeta. Vivía en el desierto, comía miel silvestre y langostas, y vestía ropas hechas con pelo de camello.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-02.jpg"><p>Mucha gente iba a oír a Juan. Les predicaba diciendo: “¡Arrepentíos, porque el Reino de Dios está cerca!”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-03.jpg"><p>Algunas personas al oír el mensaje de Juan se arrepentían y eran bautizadas, pero había muchos líderes religiosos que venían a ser bautizados sin haberse arrepentido ni confesar sus pecados.</p></section>
@@ -105,13 +104,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-08.jpg"><p>Cuando Jesús salió del agua, el Espíritu de Dios tomó la apariencia de una paloma y se posó sobre él. Al mismo una voz desde el cielo dijo: “Tú eres Mi Hijo amado, en tí tengo complacencia.”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-09.jpg"><p>Dios le había dicho a Juan: “El Espíritu Santo se pondrá sobre alguien a quien tú bautizarás. Él es el Hijo de Dios.” Solo hay un Dios. Pero Dios es tres personas: el Padre, Jesús el Hijo, y el Espíritu Santo.</p></section>
 <section><a href="../25/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

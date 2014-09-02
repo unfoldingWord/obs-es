@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>14. Vagando por el Desierto</h1><h3>Una historia de la Biblia en: Éxodo 16-17; Números 10-14; 20; 27; Deuteronomio 34</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>14. Vagando por el Desierto</h1><h3>Una historia de la Biblia en: Éxodo 16-17; Números 10-14; 20; 27; Deuteronomio 34</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-01.jpg"><p>Después de que los israelitas recibieran el Pacto de Dios en el Monte Sinaí, Dios empezó a llevarles hacia la Tierra Prometida, también llamada Canaán. La columna de nube les mostraba el camino.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-02.jpg"><p>Dios había prometido a Abraham, Isaac, y Jacob que les daría la Tierra Prometida a sus descendientes, pero ahora había muchos grupos de personas viviendo allí. Eran conocidos como cananeos. Los cananeos no creían en Dios. Adoraban falsos dioses y hacían muchas cosas malas.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-03.jpg"><p>Dios dijo a los israelitas: “Debéis deshaceros de todos los canaeos de la Tierra Prometida. No hagáis las paces con ellos ni os caséis con ellos. Debéis destruir completamente sus ídolos. Si no hacéis esas cosas, adoraréis a sus ídolos en vez de a Mi.”</p></section>
@@ -111,13 +110,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-14.jpg"><p>Después de que los israelitas erraran por el desierto durante cuarenta años, toda la gente que se había rebelado contra Dios murió. Dios llevó a los israelitas a la frontera con la Tierra Prometida otra vez. Moisés era ahora muy viejo, así que escogió a Josué para ayudarle a liderar al pueblo. Dios prometió a Moisés que un día levantaría un profeta como Moisés.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-15.jpg"><p>Dios llevó a Moisés a lo alto de una montaña para que pudiera ver la Tierra Prometida. Moisés vio la Tierra Prometida pero nunca entró en ella. Moisés murió, y los israelitas guardaron luto por él durante treinta días. Josué se convirtió en su nuevo líder. Josué fue un buen líder porque confiaba y obedecía a Dios.</p></section>
 <section><a href="../15/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

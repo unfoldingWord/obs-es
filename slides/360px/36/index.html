@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>36. La Transfiguración.</h1><h3>Una historia de la Biblia en: Mateo 17:1-9; Marcos 9:2-8; Lucas 9:28-36</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>36. La Transfiguración.</h1><h3>Una historia de la Biblia en: Mateo 17:1-9; Marcos 9:2-8; Lucas 9:28-36</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-36-01.jpg"><p>Un día, Jesús tomó con él a tres de sus discípulos, Pedro, Santiago y Juan. (Este Juan no era la misma persona que bautizó a Jesús.) Y subieron a un monte alto.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-36-02.jpg"><p>De repente, el rostro de Jesús se hizo tan brillante como el sol y sus vestidos se hicieron blancos como la luz, más blancos de lo que nadie en el mundo podría hacerlos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-36-03.jpg"><p>Entonces se aparecieron Moisés y Elías, que vivieron cientos de años atrás. Ellos hablaron con Jesús sobre su muerte que pronto tendría lugar en Jerusalén.</p></section>
@@ -103,13 +102,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-36-06.jpg"><p>Entonces Jesús les tocó y dijo: "No tengáis miedo. Levantáos". Cuando miraron a su alrededor no vieron a nadie más que a Jesús.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-36-07.jpg"><p>Mientras bajaban por la montaña, Jesús les dijo: “No digáis a nadie lo que pasó aquí hasta después que haya resucitado de entre los muertos.”</p></section>
 <section><a href="../37/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

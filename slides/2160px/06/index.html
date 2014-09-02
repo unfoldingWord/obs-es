@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>6. Dios Provee para Isaac</h1><h3>Una historia de la Biblia de: Génesis 24:1-25:26</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>6. Dios Provee para Isaac</h1><h3>Una historia de la Biblia de: Génesis 24:1-25:26</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-06-01.jpg"><p>Cuando Abraham era ya anciano e Isaac había crecido hasta hacerse un hombre, Abraham envió a uno de sus siervos de vuelta a la tierra donde vivían sus parientes para que encontrara una esposa para su hijo, Isaac.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-06-02.jpg"><p>Después de un muy largo viaje, Dios dirigió al siervo hacia Rebeca, que era nieta del hermano de Abraham.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-06-03.jpg"><p>Rebeca estuvo de acuerdo en dejar su familia y volver con el siervo. Isaac se casó con ella tan pronto como llegó.</p></section>
@@ -103,13 +102,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-06-06.jpg"><p>Dios le dijo a Rebeca: "Hay dos naciones dentro de ti. Lucharán el uno contra el otro y el hijo mayor servirá al menor".</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-06-07.jpg"><p>Cuando nacieron los niños de Rebeca, el hijo mayor salió pelirrojo y peludo y le pusieron por nombre Esau. El más pequeño salió agarrando el talón de Esaú, y le pusieron por nombre Jacob.</p></section>
 <section><a href="../07/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

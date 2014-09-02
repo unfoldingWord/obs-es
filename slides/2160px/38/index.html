@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>38. Jesús es traicionado</h1><h3>Una historia de la Biblia en: Mateo 26:14-56; Marcos 14:10-50; Lucas 22:1-53; Juan 18:1-11</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>38. Jesús es traicionado</h1><h3>Una historia de la Biblia en: Mateo 26:14-56; Marcos 14:10-50; Lucas 22:1-53; Juan 18:1-11</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-38-01.jpg"><p>Jesús estuvo predicando durante unos tres años. Era la época de la fiesta de la Pascua, cuando los judíos recordaban cómo Dios los había salvado de la esclavitud en Egipto muchos años antes. Jesús sabía lo que le iba a pasar y dijo a sus discípulos que iba a ir a Jerusalén, donde lo iban a matar.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-38-02.jpg"><p>Los líderes judíos de Jerusalén habían rechazado creer que Jesús era el Mesías y estaban conspirando para matarlo. Judas fue uno de los discípulos de Jesús. Estuvo a cargo del dinero de los discípulos, pero le gustaba el dinero y con frecuencia lo robó. Judas fue a los líderes judíos y se ofreció a entregarles a Jesús.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-38-03.jpg"><p>Los líderes judíos, dirigidos por el sumo sacerdote, pagaron a Judas treinta piezas de plata por traicionar a Jesús. Esto sucedió tal como habían predicho los profetas. Judas estuvo de acuerdo, tomó el dinero y buscó una oportunidad para ayudar a arrestar a Jesús.</p></section>
@@ -111,13 +110,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-38-14.jpg"><p>Judas vino con los líderes judíos, soldados, y una gran multitud con espadas y garrotes. Se acercó a Jesús y le dijo: "Saludos, maestro", y lo besó. Esta fue la señal para que los líderes judíos supieran a quién arrestar. Entonces Jesús le dijo: "Judas, ¿me traicionas con un beso?"</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-38-15.jpg"><p>Cuando los soldados arrestaron a Jesús, Pedro sacó su espada y le cortó la oreja al siervo del sumo sacerdote. Jesús dijo: "¡Guarda la espada! Podría pedirle al Padre un ejército de ángeles para defenderme. Pero debo obedecer a mi Padre. "Entonces Jesús sanó la oreja del hombre, y todos los discípulos huyeron.</p></section>
 <section><a href="../39/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>8. Dios salva a José y a su Familia</h1><h3>Una historia de la Biblia en: Génesis 37-50</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>8. Dios salva a José y a su Familia</h1><h3>Una historia de la Biblia en: Génesis 37-50</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-08-01.jpg"><p>Los hermanos de José le odiaban porque su padre le quería más y porque José había soñado que sería su gobernante. Cuando José encontró a sus hermanos, ellos le secuestraron y vendieron a unos mercaderes de esclavos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-08-02.jpg"><p>Muchos años más tarde, cuando Jacob era viejo, envió a José, su hijo favorito para que comprobara lo que estaban haciendo sus hermanos, que estaban lejos, cuidando de los rebaños.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-08-03.jpg"><p>Antes de volver a casa, los hermanos de José rasgaron sus ropas y las tiñeron de sangre. Luego le enseñaron a su padre las ropas para que pensara que un animal salvaje había matado a José. Jacob se quedó muy triste.</p></section>
@@ -111,13 +110,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-08-14.jpg"><p>A pesar de ser Jacob ya muy anciano, se trasladó a Egipto conn toda su familia, y vivieron allí todos juntos. Antes de morir Jacob bendijo a cada uno de sus hijos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-08-15.jpg"><p>El pacto de la promesa que Dios había hecho a Abraham pasó a Isaac, luego a Jacob, y luego a los doce hijos de Jacob y sus familias. Los descendientes de los doce hijos se convirtieron en las doce tribus de Israel.</p></section>
 <section><a href="../09/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

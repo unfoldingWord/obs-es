@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>20. El Exilio y el Regreso</h1><h3>Una historia de la Biblia en: 2 Reyes 17; 24-25; 2 Crónicas 36; Esdrás 1-10; Nehemías 1-13</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>20. El Exilio y el Regreso</h1><h3>Una historia de la Biblia en: 2 Reyes 17; 24-25; 2 Crónicas 36; Esdrás 1-10; Nehemías 1-13</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-01.jpg"><p>Las naciones de Israel y Judá pecaron contra Dios. Rompieron el Pacto que Dios había hecho con ellos en el Monte Sinaí. Dios envió sus profetas para advertirles de que tenían que arrepentirse y volver a adorarle, pero rehusaron oír.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-02.jpg"><p>Así que Dios castigó a ambas naciones permitiendo que fueran destruidas por sus enemigos. Israel fue destruída por el Imperio Asirio, una poderosa y cruel nación. Los asirios asesinaron a muchos israelitas, se llevaron todo lo de valor, y quemaron gran parte del país.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-03.jpg"><p>Los asirios juntaron a los líderes, la gente rica y la gente con experiencia y se los llevaron a Asiria. Solo los israelitas muy pobres que no habían sido asesinados se quedaron en Israel.</p></section>
@@ -109,13 +108,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-12.jpg"><p>Poco después de que Ciro llegara al poder, hizo algo que no se había hecho nunca antes en la historia. Dio la orden de que cualquier judío que quisiera volver a Judá podría hacerlo. ¡Incluso les dio dinero para reconstruir el Templo! Después de setenta años en el exilio, un pequeño grupo de judíos volvió a Jerusalén.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-13.jpg"><p>Cuando llegaron a Jerusalén, reconstruyeron el Templo y las murallas alrededor de la ciudad. Aunque todavía eran gobernados por otro pueblo, vivían en la Tierra Prometida una vez más y adoraban en el Templo.</p></section>
 <section><a href="../21/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

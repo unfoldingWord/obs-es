@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>22. El nacimiento de Juan</h1><h3>Una historia de la Biblia en: Lucas 1</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>22. El nacimiento de Juan</h1><h3>Una historia de la Biblia en: Lucas 1</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-22-01.jpg"><p>Habían pasado más de 400 años desde que Dios había hablado a su pueblo. Entonces un ángel se le apareció a un viejo sacerdote llamado Zacarías. Él y su esponsa, Elisabeth, era gente de Dios, pero no podían tener hijos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-22-02.jpg"><p>El ángel le dijo a Zacarías: “Tu esposa tendrá un hijo. Le pondréis por nombre Juan. ¡Será un gran profeta que precederá al Mesías!” Zacarías respondió: “¡Mi esposa y yo somos ya demasiado viejos para tener hijos! ¿Cómo puede ocurrir eso?”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-22-03.jpg"><p>El ángel respondió: “Fui enviado por Dios para traerte estas buenas noticias. Como no me has creído, no podrás hablar hasta que haya nacido el niño.” Inmediatamente Zacarías fue incapaz de hablar. El ángel se fue. Zacarías volvió a casa, y su esposa quedó embarazada.</p></section>
@@ -103,13 +102,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-22-06.jpg"><p>No mucho después de esto, María fue a visitar a Elisabeth. Tan pronto como Elisabeth oyó el saludo de María, el bebé de Elisabeth saltó dentro de ella. Las mujeres se regocijaron por lo que Dios había hecho con ellas. Después de estar con ella durante tres meses, María volvió a casa.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-22-07.jpg"><p>Después de que Elisabeth diera a luz a su bebé, le pusieron por nombre Juan, como el ángel les había mandado. Entonces Dios permitió que Zacarías volviera a hablar. Él dijo: “¡Bendito sea Dios, porque se ha acordado de su pueblo! Tú, hijo mío, serás llamado profeta del Altísimo! ¡Tú prepararás el camino para el Mesías!”</p></section>
 <section><a href="../23/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

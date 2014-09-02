@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>9. Dios llama a Moisés</h1><h3>Una historia de la Biblia de: Exodo 1-4</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>9. Dios llama a Moisés</h1><h3>Una historia de la Biblia de: Exodo 1-4</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-09-01.jpg"><p>Después de la muerte de José, todos sus parientes se quedaron en Egipto. Ellos y sus descendientes siguieron viviendo allí durante muchos años y tuvieron muchos hijos. Fueron llamados "israelitas".</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-09-02.jpg"><p>Muchos años más tarde, un nuevo Faraón llegó al poder en Egipto. Los egipcios se olvidaron de José y de todo lo que había hecho para ayudarles. Empezaron a temer a los israelitas porque eran muchos. Entonces los egipcios hicieron de los israelitas sus esclavos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-09-03.jpg"><p>Los egipcios obligaron a los israelitas a construir muchos edificios e incluso ciudades enteras. El duro trabajo hizo que sus vidas fueran miserables, pero Dios les bendijo, e incluso tuvieron más hijos.</p></section>
@@ -111,13 +110,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-09-14.jpg"><p>Moisés dijo: “¿Qué pasara si la gente quiere saber quién me envió? ¿Qué debo decir?” Dios dijo: “YO SOY EL QUE SOY. Diles, ‘YO SOY me ha enviado a vosotros.’ Diles tambien: "Yo soy Yahweh, el Dios de vuestros antepasados Abraham, Isaac y Jacob. Este es Mi nombre para siempre.”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-09-15.jpg"><p>Moisés no quería ir al Faraón porque creía que no podría hablar bien, así que Dios mandó al hermano de Moisés,  Aaron, para ayudarle. Dios advirtió a Moisés y Aaron que el Faraón sería muy terco.</p></section>
 <section><a href="../10/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

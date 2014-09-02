@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>3. El Diluvio</h1><h3>Una historia de la Biblia de: Génesis 6-8</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>3. El Diluvio</h1><h3>Una historia de la Biblia de: Génesis 6-8</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-03-01.jpg"><p>Pasado mucho tiempo, vivía mucha gente en el mundo. Se habían hecho muy malos y violentos. Llegaron a ser tan malos que Dios decidió destruir a todo el mundo por medio de un gran diluvio.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-03-02.jpg"><p>Pero Noé halló el favor de Dios. Era un hombre justo en medio de tanta gente malvada. Dios le contó a Noé lo del diluvio que estaba planeando enviar. Le dijo a Noé que contruyera un gran navio.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-03-03.jpg"><p>Dios le dijo a Noé que hiciera el barco de unos 140 metros de largo, 23 metros de ancho, y 13.5 metros de alto. Estaría hecho de madera y tendría 3 niveles, muchos aposentos, un techo, y una ventana. El barco guardaría a salvo a Noé, a su familia y cada tipo de animal terrestre durante el diluvio.</p></section>
@@ -112,13 +111,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-03-15.jpg"><p>Dios dijo: "Te prometo que no volveré a maldecir la tierra por causa del hombre o destruiré el mundo con un diluvio, a pesar de que los humanos son pecadores desde su juventud.”</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-03-16.jpg"><p>Dios hizo entonces el primer arco iris como señal de su promesa. Cada vez que el arco iris apareciera en el cielo, Dios recordaría lo que había prometido y lo que haría a su pueblo.</p></section>
 <section><a href="../04/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

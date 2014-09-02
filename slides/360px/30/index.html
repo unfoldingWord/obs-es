@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>30. Jesús alimenta cinco mil personas</h1><h3>Una historia de la Biblia de: Mateo 14:13-21; Marcos 6:31-44; Lucas 9:10-17; Juan 6:5-15</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>30. Jesús alimenta cinco mil personas</h1><h3>Una historia de la Biblia de: Mateo 14:13-21; Marcos 6:31-44; Lucas 9:10-17; Juan 6:5-15</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-30-01.jpg"><p>Jesús envió a sus discípulos a predicar y enseñar. Cuando regresaron, le contaron a Jesús lo que habían enseñado y hecho. Entonces Jesús les invitó a ir con él a un lugar tranquilo para descansar un rato. Así que se metieron en una barca y se fueron.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-30-02.jpg"><p>Pero había muchas personas que vieron a Jesús y a los discípulos irse. Corrieron a lo largo de la orilla del lago hasta llegar al otro lado antes que ellos. Al llegar Jesús y los discípulos, fueron recibidos por una gran multitud de personas.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-30-03.jpg"><p>La multitud era de unos 5.000 hombres, sin contar mujeres y niños. Jesús sintió gran bondad hacia la gente. Para Jesús, estas personas eran como ovejas que no tienen pastor. Así que les enseñó y sanó a los enfermos.</p></section>
@@ -105,13 +104,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-30-08.jpg"><p>Entonces Jesús comenzó a partir el pan y el pescado. Dio los trozos a sus discípulos para que se lo dieran a la gente. Los discípulos estuvieron repartiendo la comida, y nunca se acabó! Toda la gente comió hasta quedar satisfecha.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-30-09.jpg"><p>Los discípulos, incluso recogieron doce canastas llenas de sobras de comida que no se había comido. Toda la comida procedía de cinco panes y dos peces.</p></section>
 <section><a href="../31/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

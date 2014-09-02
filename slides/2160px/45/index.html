@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>45. Felipe y el Oficial Etíope</h1><h3>Una historia de la Biblia en: Hechos 8:26-40</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>45. Felipe y el Oficial Etíope</h1><h3>Una historia de la Biblia en: Hechos 8:26-40</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-45-01.jpg"><p>Esteban era un líder de la primera Iglesia. tenía muy buena reputación y estaba lleno del Espíritu Santo y de sabiduría. Esteban hizo muchos milagros y persuadía con mucha energía diciendo a la gente que debía creer en Jesús.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-45-02.jpg"><p>Un día, Esteban estaba discutiendo sobre Jesús con algunos judíos que no creían. Se enfadaron tanto que mintieron sobre Esteban diciendo "¡Le hemos oído hablar malas cosas sobre Moisés y sobre Dios!". Así que arrestaron a Esteban y le mandaron ante el sumo sacerdote y a los líderes de los judíos.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-45-03.jpg"><p>El sumo sacerdote preguntó a Esteban "¿Son verdad todas estas cosas?!" Esteban les recordó todas las grandes cosas que Dios había hecho desde los tiempos de Abraham hasta Jesús. Entonces contestó: “Vosotros, gente obstinada y rebelde siempre rechazáis al Espíritu Santo, igual que vuestros antepasados rechazaron a Dios y mataron a sus profetas. ¡Incluso habéis matado al Mesías que Dios envió!”</p></section>
@@ -109,13 +108,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-45-12.jpg"><p>Así que bajaron al agua, y Felipe le bautizó. Después de bautizar al Etíope, el Espíritu Santo se llevó a Felipe a otro lugar donde continuó hablando a la gente de Jesús.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-45-13.jpg"><p>El Etíope siguió su camino, feliz de conocer a Jesús.</p></section>
 <section><a href="../46/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 

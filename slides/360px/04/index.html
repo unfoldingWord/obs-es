@@ -91,10 +91,9 @@
             <li>50. Jesús regresa</li>
         </ul>
     </div>
-    <div class="contents">
-        <div class="reveal">
-            <div class="slides">
-                <section><h1>4. El Pacto de Dios con Abraham</h1><h3>Una historia de la Biblia de: Génesis 11-15</h3></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><h1>4. El Pacto de Dios con Abraham</h1><h3>Una historia de la Biblia de: Génesis 11-15</h3></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-04-01.jpg"><p>Muchos años después del diluvio, había mucha gente en el mundo, y todos ellos hablaban la misma lengua. Pero en lugar de llenar la tierra como Dios había mandado, se unieron y construyeron una ciudad.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-04-02.jpg"><p>Se volvieron muy orgullosos, y no les importó lo que Dios había dicho. Incluso empezaron a construir una gran torre para llegar al cielo. Dios vio que si se ponían a trabajar juntos, podrían hacer muchas más cosas malas.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-04-03.jpg"><p>Así que cambió sus lengas en muchos idiomas diferentes y esparció a la gente por todo el mundo. La ciudad que ellos habían empezado a construir fue llamada "Babel", que significa "confusión".</p></section>
@@ -105,13 +104,56 @@
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-04-08.jpg"><p>Pasaron muchos años, pero Abram y Sarai no tenían ningún hijo. Dios habló a Abram y le volvió a prometer que le daría un hijo y tantos descendientes como estrellas en el cielo. Abram creyó la promesa de Dios. Dios declaró que Abram era justo por haber creído en la promesa de Dios.</p></section>
 <section data-background="http://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-04-09.jpg"><p>Entonces Dios hizo un pacto con Abram. Un pacto es un acuerdo entre dos partes. Dios dijo: "Te daré un hijo de tu propia carne, Yo daré la tierra de Canaán a tus descendientes". Pero Abram todavía no tenía un hijo.</p></section>
 <section><a href="../05/index.html"><p>Siguiente capítulo</p></a></section>
-                </div>
             </div>
         </div>
 
         <script src="../../js/head.min.js"></script>
         <script src="../../js/reveal.min.js"></script>
         <script src="../../js/meny.js"></script>
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector( '.meny' ),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector( '.reveal' ),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+                var contents = document.querySelector( '.contents' );
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
 
         <script>
 
