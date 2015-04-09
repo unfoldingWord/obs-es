@@ -100,10 +100,10 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-01.jpg"><p>Juan, el hijo de Zacarías yt Elisabeth creció y se convirtió en profeta. Vivía en el desierto, comía miel silvestre y langostas, y vestía ropas hechas con pelo de camello.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-02.jpg"><p>Mucha gente iba al desierto a oír a Juan. Les predicaba diciendo: “¡Arrepentíos, porque el reino de Dios está cerca!”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-03.jpg"><p>Cuando las personas oían el mensaje de Juan, muchos se arrepentían de sus pecados y Juan les bautizaba. Muchos líderes religiosos también venían a ser bautizados por Juan, pero no se arrepentían ni confesaban sus pecados.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-04.jpg"><p>Juan decía a estos líderes religiosos: “¡Serpientes venenosas! Arrepentíos y cambiad vuestra conducta. Todo árbol que no produzca buen fruto será cortado y echado al fuego". Juan cumplía lo que los profestas dijeron: “Mira, Yo envío mi mensajero delante de tí, el cual preparará tu camino.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-04.jpg"><p>Juan decía a estos líderes religiosos: “¡Serpientes venenosas! Arrepentíos y cambiad vuestra conducta. Todo árbol que no produzca buen fruto será cortado y echado al fuego”. Juan cumplía lo que los profestas dijeron: “Mira, Yo envío mi mensajero delante de tí, el cual preparará tu camino.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-05.jpg"><p>Algunos judíos preguntaron a Juan si él era el Mesías. Juan contestó: “Yo no soy el Mesías, pero hay alguien que viene después de mí. Él es tan grande que yo ni siquiera soy digno de desatar sus sandalias.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-06.jpg"><p>Al día siguiente, Jesús vino para ser bautizado por Juan. Cuando Juan le vio dijo: “¡Mirad! Este es el Cordero de Dios que quitará los pecados del mundo.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-07.jpg"><p>Juan dijo a Jesús: “Yo no soy digno de bautizarte. Tu deberías bautizarme a mí.” Pero Jesús dijo:  “Debes bautizarme, porque es lo que debe hacerse.” Así que Juan le bautizó, aun cuando Jesús no hubiera pecado nunca.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-07.jpg"><p>Juan dijo a Jesús: “Yo no soy digno de bautizarte. Tu deberías bautizarme a mí.” Pero Jesús dijo: “Debes bautizarme, porque es lo que debe hacerse.” Así que Juan le bautizó, aun cuando Jesús no hubiera pecado nunca.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-08.jpg"><p>Cuando Jesús subió del agua después de ser bautizado, el Espíritu de Dios aparienció en forma de una paloma y descendió y reposó sobre él. Al mismo la voz de Dios habló desde el cielo diciendo: “Tú eres Mi Hijo a quien Yo amo, y en tí tengo complacencia.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-24-09.jpg"><p>Dios le había dicho a Juan: “El Espíritu Santo descenderá y reposará sobre alguien a quien tú bautizarás. Esa persona es el Hijo de Dios.” Solo hay un Dios. Pero cuando Juan bautizó a Jesús, oyó hablar a Dios el Padre, vió a Dios el Hijo, y vio a Dios el Espíritu Santo.</p></section>
 <section><a href="../25/index.html"><p>Siguiente capítulo</p></a></section>
@@ -153,6 +153,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -178,10 +180,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

@@ -109,9 +109,9 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-10.jpg"><p>Después de otros cuarenta días, Noé envió fuera a un cuervo para ver si las aguas se habían secado ya. El cuervo estuvo yendo y viniendo buscando tierra seca, pero no pudo encontrarla.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-11.jpg"><p>Más tarde Noé envió fuera a una paloma. Pero tampoco pudo encontrar tierra seca, así que regresó con Noé. Una semana más tarde volvió a soltar a la paloma, y ¡ésta volvió con una rama de olivo en su pico! ¡Las aguas estaban bajando, y las plantas volvían a crecer otra vez!</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-12.jpg"><p>Noé esperó otra semana y soltó la paloma una tercera vez. Esta vez no regresó. ¡Las aguas se habían secado!</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-13.jpg"><p>Dos meses más tarde Dios le dijo a Noé, “Tú y tu familia y todos los animales debéis dejar ahora el barco. Tened muchos hijos y nietos y llenad la tierra". Ellos, pues, salieron del barco.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-13.jpg"><p>Dos meses más tarde Dios le dijo a Noé, “Tú y tu familia y todos los animales debéis dejar ahora el barco. Tened muchos hijos y nietos y llenad la tierra”. Ellos, pues, salieron del barco.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-14.jpg"><p>Despues de bajarse del barco, Noé construyó un altar y sacrificó algunos de los animales que podían ser usados como sacrificio. Dios estaba contento con el sacrificio y bendijo a Noé y a su familia.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-15.jpg"><p>Dios dijo: "Te prometo que no volveré a maldecir la tierra por causa de las malas cosas que hacen los hombres o destruir el mundo por medio de un diluvio, a pesar de que la gente es pecadora desde el tiempo en que son niños.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-15.jpg"><p>Dios dijo: “Te prometo que no volveré a maldecir la tierra por causa de las malas cosas que hacen los hombres o destruir el mundo por medio de un diluvio, a pesar de que la gente es pecadora desde el tiempo en que son niños.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-03-16.jpg"><p>Dios hizo entonces el primer arco iris como señal de su promesa. Cada vez que el arco iris apareciera en el cielo, Dios recordaría lo que había prometido y lo que haría a su pueblo.</p></section>
 <section><a href="../04/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
@@ -160,6 +160,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -185,10 +187,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

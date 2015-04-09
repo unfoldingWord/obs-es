@@ -100,8 +100,8 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-01.jpg"><p>Jesús envió a sus apóstoles a predicar y enseñar en diferentes pueblos. Cuando regresaron donde estaba Jesús, le contaron lo que habían enseñado y hecho. Entonces Jesús les invitó a ir con él a un lugar tranquilo en el lago para descansar un rato. Así que se metieron en una barca y se fueron al otro lado del lago.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-02.jpg"><p>Pero había muchas personas que vieron a Jesús y a los discípulos irse en el barco. Esa gente corrió a lo largo de la orilla del lago hasta llegar al otro lado antes que ellos. Así que cuando llegaron Jesús y los discípulos, un gran grupo de personas estaba ya allí, esperándoles.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-03.jpg"><p>La multitud era de unos 5.000 hombres, sin contar mujeres y niños. Jesús sintió gran compasión hacia la gente. Para Jesús, estas personas eran como ovejas que no tienen pastor. Así que les enseñó y sanó a los que estaban enfermos entre ellos.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-04.jpg"><p>Algo más tarde en el día, los discípulos le dijeron a Jesús: "Es tarde y no hay pueblos cercanos. Despide a la gente para que puedan ir a buscar algo de comer."</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-05.jpg"><p>Pero Jesús dijo a los discípulos: "¡Dadles vosotros de comer!" Ellos respondieron: "¿Cómo podemos hacer eso? Sólo tenemos cinco panes y dos pequeños peces".</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-04.jpg"><p>Algo más tarde en el día, los discípulos le dijeron a Jesús: “Es tarde y no hay pueblos cercanos. Despide a la gente para que puedan ir a buscar algo de comer.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-05.jpg"><p>Pero Jesús dijo a los discípulos: “¡Dadles vosotros de comer!” Ellos respondieron: “¿Cómo podemos hacer eso? Sólo tenemos cinco panes y dos pequeños peces”.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-06.jpg"><p>Jesús dijo a sus discípulos que el dijeran a la gente de la multitud que se sentaran sobre la hierba, en grupos de cincuenta personas cada uno.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-07.jpg"><p>Entonces Jesú tomó los cinco panes y los dos peces, mirando al cielo, y dio gracias a Dios por los alimentos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-30-08.jpg"><p>Entonces Jesús partió el pan y el pescado en trozos. Dio los trozos a sus discípulos para que se lo dieran a la gente. Los discípulos estuvieron repartiendo la comida, y nunca se acabó! Toda la gente comió hasta quedar satisfecha.</p></section>
@@ -153,6 +153,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -178,10 +180,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

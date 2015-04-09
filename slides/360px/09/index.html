@@ -97,7 +97,7 @@
     <div class="reveal">
         <div class="slides">
             <section><h1>9. Dios llama a Moisés</h1><h3>Una historia de la Biblia de: Exodo 1-4</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-01.jpg"><p>Después de la muerte de José, todos sus parientes se quedaron en Egipto. Ellos y sus descendientes siguieron viviendo allí durante muchos años y tuvieron muchos hijos. Fueron llamados "israelitas".</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-01.jpg"><p>Después de la muerte de José, todos sus parientes se quedaron en Egipto. Ellos y sus descendientes siguieron viviendo allí durante muchos años y tuvieron muchos hijos. Fueron llamados “israelitas”.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-02.jpg"><p>Despues de cientos de años el número de los israelitas se había hecho muy grande. Los egipcios se olvidaron de José y de todo lo que había hecho para ayudarles. Empezaron a temer a los israelitas porque eran muchos. El Faraón que gobernaba Egipto en ese tiempo hizo a los israelitas esclavos de los egipcios.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-03.jpg"><p>Los egipcios obligaron a los israelitas a construir muchos edificios e incluso ciudades enteras. El duro trabajo hizo que sus vidas fueran miserables, pero Dios les bendijo, e incluso tuvieron más hijos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-04.jpg"><p>Faraón vio que los israelitas estaban teniendo muchos bebés, así que ordenó que todo bebé Israelita varón fuera asesinado arrojandole al Rio Nilo.</p></section>
@@ -110,8 +110,8 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-11.jpg"><p>Moisés se hizo pastor en el desierto muy lejos de Egipto. Se casó con una mujer de aquel lugar y tuvo dos hijos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-12.jpg"><p>Un día, mientras Moisés cuidaba sus ovejas, vio un arbusto que ardía. Pero el arbusto no se consumía. Moisés se acercó al arbusto para poder verlo mejor. Mientras se aproximaba al ardiente arbusto, la voz de Dios dijo: “Moisés, quita tu calzado. Estás en tierra sagrada.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-13.jpg"><p>Dios dijo: “He visto el sufrimiento de Mi pueblo. Te enviaré al Faraón para que te lleves a los israelitas lejos de la esclavitud de Egipto. Yo les daré la tierra de Canaán, la tierra que prometí a Abraham, Isaac, y Jacob.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-14.jpg"><p>Moisés respondió: “¿Qué pasara si la gente quiere saber quién me envió? ¿Qué debo decir?” Dios dijo: “YO SOY EL QUE SOY. Diles, ‘YO SOY me ha enviado a vosotros.’ Diles tambien: "Yo soy Yahweh, el Dios de vuestros antepasados Abraham, Isaac y Jacob. Este es Mi nombre para siempre.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-15.jpg"><p>Moisés tuvo miedo y no quería ir al Faraón porque creía que no podría hablar bien, así que Dios mandó al hermano de Moisés,  Aaron, para ayudarle. Dios advirtió a Moisés y Aaron que el Faraón sería muy terco.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-14.jpg"><p>Moisés respondió: “¿Qué pasara si la gente quiere saber quién me envió? ¿Qué debo decir?” Dios dijo: “YO SOY EL QUE SOY. Diles, ‘YO SOY me ha enviado a vosotros.’ Diles tambien:”Yo soy Yahweh, el Dios de vuestros antepasados Abraham, Isaac y Jacob. Este es Mi nombre para siempre.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-09-15.jpg"><p>Moisés tuvo miedo y no quería ir al Faraón porque creía que no podría hablar bien, así que Dios mandó al hermano de Moisés, Aaron, para ayudarle. Dios advirtió a Moisés y Aaron que el Faraón sería muy terco.</p></section>
 <section><a href="../10/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
         </div>
@@ -159,6 +159,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -184,10 +186,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

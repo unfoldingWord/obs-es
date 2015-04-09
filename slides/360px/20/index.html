@@ -105,9 +105,9 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-06.jpg"><p>Unos 100 años después de que los asirios destruyeran el reino de Israel, Dios envió a Nabucodonosor, rey de los babilonios, a atacar el reino de Judá. Babilonia era un poderoso imperio. El rey de Judá acordó ser siervo de Nabucodonosor y pagarle mucho dinero cada año.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-07.jpg"><p>Pero después de unos pocos años, el rey de Judá se rebeló contra Babilonia. Así que los babilonios regresaron y atacaron al reino de Judá. Capturaron la ciudad de Jerusalén, destruyeron el Templo, y se llevaron todos los tesoros de la ciudad y del Templo.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-08.jpg"><p>Para castigar al rey de Judá por su rebelión, los soldados de Nabucodonosor mataron a los hijos del rey delante de él y le dejaron ciego. Después de eso, se llevaron al rey para que muriera en una cárcel de Babilonia.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-09.jpg"><p>Nabucodonosor y su ejército se llevaron a casi todo el pueblo del reino de Judá a Babilonia, dejando solo a la gente más pobre para que sembraran los campos. Este periodo de tiempo en el que el pueblo de Dios fue obligado a dejar la Tierra Prometida es llamado el "Exilio".</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-09.jpg"><p>Nabucodonosor y su ejército se llevaron a casi todo el pueblo del reino de Judá a Babilonia, dejando solo a la gente más pobre para que sembraran los campos. Este periodo de tiempo en el que el pueblo de Dios fue obligado a dejar la Tierra Prometida es llamado el “Exilio”.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-10.jpg"><p>Incluso a pesar de que Dios a su pueblo por su pecado, llevándolos fuera, al exilio, Él no se olvidó de ellos ni de Sus promesas. Dios continuó velando por Su pueblo y hablandole por medio de sus profetas. Prometió que, después de setenta años, regresarían otra vez a la Tierra Prometida.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-11.jpg"><p>Casi setenta años después, Ciro, rey de los Persas, derrotó a Babilonia, por lo que el Imperio Persa reemplazó al Imperio Babilonio. Los israelitas eran ahora llamos "Judíos" y la mayoría de ellos habían vivido toda su vida en Babilonia. Solo unos pocos judíos recordaban aun la tierra de Judá.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-11.jpg"><p>Casi setenta años después, Ciro, rey de los Persas, derrotó a Babilonia, por lo que el Imperio Persa reemplazó al Imperio Babilonio. Los israelitas eran ahora llamos “Judíos” y la mayoría de ellos habían vivido toda su vida en Babilonia. Solo unos pocos judíos recordaban aun la tierra de Judá.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-12.jpg"><p>El Imperio persa era fuerte, pero misericordioso con la gente que conquistaba. Poco después de que Ciro fuera rey de los persas, dio la orden de que cualquier judío que quisiera volver a Judá podría dejar Persia y regresar a Judá. ¡Incluso les dio dinero para reconstruir el Templo! Así que después de setenta años en el exilio, un pequeño grupo de judíos volvió a la ciudad de Jerusalén en Judá.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-20-13.jpg"><p>Cuando llegaron a Jerusalén, reconstruyeron el Templo y las murallas alrededor de la ciudad. Aunque todavía eran gobernados por otro pueblo, de nuevo vivían en la Tierra Prometida y adoraban en el Templo.</p></section>
 <section><a href="../21/index.html"><p>Siguiente capítulo</p></a></section>
@@ -157,6 +157,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -182,10 +184,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

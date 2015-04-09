@@ -103,13 +103,13 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-04.jpg"><p>Cuando la gente de Jerusalén oyó el alboroto, una multitud fue a ver lo que estaba pasando. Cuando la gente oyó a los creyentes proclamar las maravillosas obras de Dios, estaban atónitos al escuchar estas cosas en sus propios idiomas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-05.jpg"><p>Algunas personas acusaron a los discípulos de estar borrachos. Pero Pedro se puso en pié y les dijo: “¡Escuchadme! ¡Estas personas no están borrachas! Esto cumple una profecía hecha por Joel en la que Dios dijo, ‘En los últimos días, yo derramaré Mi Espíritu.’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-06.jpg"><p>“Hombres de Israel, Jesús fue un hombre que hio muchas poderosas señales y maravillas por el poder de Dios, como vísteis y ya sabéis. ¡Pero vosotros le crucificasteis!”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-07.jpg"><p>“A pesar de que Jesús murió, Dios le levantó de la muerte. Esto cumple la profecía que dice: ‘No permitirás que Tu Santo se quede en la tumba'. Nosotros somos testigos del hecho de que Dios levantó a Jesús a la vida otra vez.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-08.jpg"><p>“Jesús está ahora exaltado a la diestra de Dios Padre. Y Jesús  ha enviado al Espíritu Santo tal como pormetió que haría. El Espíritu Santo es el causante de las cosas que ahora estáis viendo y oyendo.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-07.jpg"><p>“A pesar de que Jesús murió, Dios le levantó de la muerte. Esto cumple la profecía que dice: ‘No permitirás que Tu Santo se quede en la tumba’. Nosotros somos testigos del hecho de que Dios levantó a Jesús a la vida otra vez.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-08.jpg"><p>“Jesús está ahora exaltado a la diestra de Dios Padre. Y Jesús ha enviado al Espíritu Santo tal como pormetió que haría. El Espíritu Santo es el causante de las cosas que ahora estáis viendo y oyendo.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-09.jpg"><p>“¡Vosotros crucificásteis a este hombre, jesús. Pero sabed por cierto que Dios ha constituído a Jesús, Señor y Mesías!”.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-10.jpg"><p>La gente oyendo a Pedro se sintieron profundamente conmovidos por lo  que decía. Así que preguntaron a Pedro y a los discípulos: “Hermanos, ¿qué tenemos que hacer?”.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-11.jpg"><p>Pedro les contestó: “Cada uno de vosotros debe arrepentirse y ser bautizado en el nombre de Jesucristo así Dios perdonará vuestros pecados. Entonces  también os dará el don del Espíritu Santo.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-10.jpg"><p>La gente oyendo a Pedro se sintieron profundamente conmovidos por lo que decía. Así que preguntaron a Pedro y a los discípulos: “Hermanos, ¿qué tenemos que hacer?”.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-11.jpg"><p>Pedro les contestó: “Cada uno de vosotros debe arrepentirse y ser bautizado en el nombre de Jesucristo así Dios perdonará vuestros pecados. Entonces también os dará el don del Espíritu Santo.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-12.jpg"><p>Cerca de 3.000 personas creyeron lo que Pedro dijo y se hicieron discípulos de Jesús. Fueron bautizados y pasaron a formar parte de la iglesia en Jerusalén.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-13.jpg"><p>Los discípulos escuchaban contínuamente la enseñanza de los apóstoles, pasaban tiempo juntos y oraban unos con otros. Disfrutaban alabando a Dios juntos y  compartían con los otros todo lo que tenían. Todo el mundo pensaba bien de ellos. Cada día más personas se hacían creyentes.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-43-13.jpg"><p>Los discípulos escuchaban contínuamente la enseñanza de los apóstoles, pasaban tiempo juntos y oraban unos con otros. Disfrutaban alabando a Dios juntos y compartían con los otros todo lo que tenían. Todo el mundo pensaba bien de ellos. Cada día más personas se hacían creyentes.</p></section>
 <section><a href="../44/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
         </div>
@@ -157,6 +157,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -182,10 +184,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

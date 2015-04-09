@@ -107,7 +107,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-08.jpg"><p>Entonces los profetas de Baal oraron a Baal, “¡Óyenos, Oh Baal!” Durante todo el día oraron y gritaron e incluso se hicieron cortes a sí mismos con cuchillos, pero no hubo respuesta.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-09.jpg"><p>Al final del día, Elías preparó un sacrificio a Dios. Entonces le dijo a la gente que vertiera doce calderos de agua encima de modo que el sacrificio y la carne, la madera e incluso de la tierra alrededor del altar estaban completamente empapados.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-10.jpg"><p>Entonces Elías oró: “Yahvé, Dios de Abraham, Isaac, y Jacob, muéstranos hoy que Tú eres el Dios de Israel y yo soy tu siervo. Respóndeme para que toda este gente sepa que Tú eres el Dios verdadero.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-11.jpg"><p>Inmediatamente, bajó fuego del cielo y quemó la carne, la leña, las rocas, la suciedad  e incluso el agua que estaba alrededor del altar. Cuando la gente vio esto, cayeron al suelo y dijeron: “Yahvé es Dios! ¡Yahvé es Dios!”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-11.jpg"><p>Inmediatamente, bajó fuego del cielo y quemó la carne, la leña, las rocas, la suciedad e incluso el agua que estaba alrededor del altar. Cuando la gente vio esto, cayeron al suelo y dijeron: “Yahvé es Dios! ¡Yahvé es Dios!”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-12.jpg"><p>Entonces Elías dijo: “¡No dejéis que escape ninguno de los profetas de Baal!” La gente capturó a los profetas de Baal y se los llevaron de allí y los mataron.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-13.jpg"><p>Entonces Elías dijo al rey Acab: “vuelve inmediatamente a la ciudad porque ya llega la lluvia” Enseguida el cielo se fue poniendo negro, y comenzó una fuerte lluvia. Yahvé había dado fin a la sequía y demostrado que Él era el único Dios.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-19-14.jpg"><p>Después del tiempo de Elías, Dios escogió a un hombre llamado Eliseo para que fuera su profeta. Dios hizo muchos milagros por medio de Eliseo. Uno de los milagros le ocurrió a Naamán, un comandante enemigo, que tenía una horrible enfermedad de la piel. Él había ido hablar de Eliseo, así que fue y le pidió a Eliseo que le sanara. Eliseo le dijo a Naamán que se sumergiera siete veces en el Rio Jordán.</p></section>
@@ -162,6 +162,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -187,10 +189,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

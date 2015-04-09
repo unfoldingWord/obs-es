@@ -105,7 +105,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-06.jpg"><p>La siguiente vez Dios hizo que todos los animales de granja de los egipcios se pusieran enfermos y murieran. Pero el corazón del Farón se endureció, y no dejor ir a los israelitas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-07.jpg"><p>Dios le dijo a Moisés que lanzara ceniza al aire frente al Faraón. Cuando lo hizo, aparecieron dolorosas llagas en la piel de los egipcios, pero no en la de los israelitas. Dios endureció el corazón de Faraón, que no dejó ir en libertad a los israelitas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-08.jpg"><p>Después de esto, Dios envió un granizo que destruyó la mayor parte de las cosechas de Egipto y mató a los que habían salido fuera. Faraón llamó a Moisés y Aarón y les dijo: “He pecado. Podéis ir.” Entonces Moisés oró, y el granizo paró de caer del cielo.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-09.jpg"><p>Pero el  Faraón volvió a pecar, endureció su corazón. No dejaría ir libres a los israelitas.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-09.jpg"><p>Pero el Faraón volvió a pecar, endureció su corazón. No dejaría ir libres a los israelitas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-10.jpg"><p>Entonces Dios hizo que enjambres de langosta vinieran a Egipto. Estas langostas se comieron todo lo que había quedado de la cosecha que el granizo no había destruido.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-11.jpg"><p>Después Dios envió una oscuridad que duró tres días. Estaba tan oscuro que los egipcios no podían dejar sus casa. Pero donde vivían los israelitas hubo luz.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-10-12.jpg"><p>Incluso después de esas nueve plagas, Faraón todavía se negaba dejar libres a los israelitas. Dado que Faraón no quería escuchar, Dios preparó una última plaga. Esto cambiaría la forma de pensar del Faraón.</p></section>
@@ -156,6 +156,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -181,10 +183,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

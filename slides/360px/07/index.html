@@ -98,14 +98,14 @@
         <div class="slides">
             <section><h1>7. Dios bendijo a Jacob</h1><h3>Una historia de la Biblia en: Génesis 25:27-33:20</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-01.jpg"><p>Según iban creciendo los chicos, a Jacob le gustaba estar en casa, pero a Esaú le gustaba salir a cazar. Rebeca amaba a Jacob, mientras que Isaac amaba a Esaú.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-02.jpg"><p>Un día, cuando Esaú regresaba de cazar, estaba muy hambriento. Esaú dijo a Jacob: "Por favor dame algo de la comida que has hecho.” Jacob respondió: “Primero, dame tus derechos de primogenitura.” Esaú le dio a Jacob sus derechos como hijo mayor. Entonces Jacob le dio algo de comer.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-02.jpg"><p>Un día, cuando Esaú regresaba de cazar, estaba muy hambriento. Esaú dijo a Jacob: “Por favor dame algo de la comida que has hecho.” Jacob respondió: “Primero, dame tus derechos de primogenitura.” Esaú le dio a Jacob sus derechos como hijo mayor. Entonces Jacob le dio algo de comer.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-03.jpg"><p>Isaac quiso dar su bendición a Esaú. Pero antes de que lo hiciera, Rebeca y Jacob le engañaron haciendo que Jacob se hiciera pasar por Esau. Isaac era viejo y no podía ver. Así que Jacob se puso la ropa de Esaú y piel de cabra en su cuello y manos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-04.jpg"><p>Jacob vino a Isaac y le dijo: “Soy Esaú. He venido, así que puedes bendecirme.” Cuando Isaac sintió el pelo de cabra y olió las ropas, pensó que era Esaú y le bendijo.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-05.jpg"><p>Esaú odió a Jacob porque Jacob le había robado sus derechos de primogenitura y además su bendición. Así que planeó matar a Jacob cuando su padre hubiera fallecido.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-06.jpg"><p>Pero Rebeca oyó el plan de Esaú. Así que ella e Isaac enviaron a Jacob lejos, a vivir con sus parientes.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-07.jpg"><p>Jacob vivió con los familiares de Rebeca durante muchos años. Durante ese tiempo se casó y tuvo doce hijos y una hija. Dios le hizo muy rico.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-08.jpg"><p>Después de veinte años lejos de su casa en Canaán, Jacob regresó allí con su familia, sus siervos, y todos sus rebaños de animales.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-09.jpg"><p>Jacob tenía mucho miedo porque pensaba que Esaú todavía quería matarle. Así que envió muchas manadas de animales  a Esaú como regalo. Los siervos que llevaban a los animales le dijeron a Esaú, “Tu iservo, Jacob, te da estos animales. Viene pronto.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-09.jpg"><p>Jacob tenía mucho miedo porque pensaba que Esaú todavía quería matarle. Así que envió muchas manadas de animales a Esaú como regalo. Los siervos que llevaban a los animales le dijeron a Esaú, “Tu iservo, Jacob, te da estos animales. Viene pronto.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-07-10.jpg"><p>Pero Esaú ya había perdonado a Jacob, y se pusieron muy contentos de poder verse el uno al otro de nuevo. Jacob entones vivó pacificamente en Canaán. Entonces Isaac murió, y Jacob y Esaú le enterraron. Las promesas del pacto que Dios había prometido a Abraham ahora pasaban de Isaac a Jacob.</p></section>
 <section><a href="../08/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
@@ -154,6 +154,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -179,10 +181,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

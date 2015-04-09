@@ -101,7 +101,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-02.jpg"><p>Dios había prometido a Abraham, Isaac, y Jacob que les daría la Tierra Prometida a sus descendientes, pero ahora había muchos grupos de personas viviendo allí. Eran conocidos como cananeos. Los cananeos no adoraban ni obedecían a Dios. Adoraban falsos dioses y hacían muchas cosas malas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-03.jpg"><p>Dios dijo a los israelitas: “Debéis deshaceros de todos los canaeos de la Tierra Prometida. No hagáis las paces con ellos ni os caséis con ellos. Debéis destruir completamente sus ídolos. Si no hacéis esas cosas, adoraréis a sus ídolos en vez de a Mi.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-04.jpg"><p>Cuando los israelitas llegaron a la frontera con Canaán, Moisés escogió a doce hombres, uno por cada tribu de Israel. Dio instrucciones a esos hombres para que fueran y espiaran la tierra y vieran cómo era. También tenían que espiar a los cananeos para ver si eran fuertes o débiles.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-05.jpg"><p>Los doce hombres viajaron por Canaán durante cuarenta días y luego regresaron. Le dijeron a la gente: “La tierra es muy fértil y los cultivos son abundantes!. Pero diez de los espías dijeron: "¡Las ciudades son muy fuertes, y la gente es gigante! ¡Si les atacamos, seguramente nos derrotarán y nos matarán!”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-05.jpg"><p>Los doce hombres viajaron por Canaán durante cuarenta días y luego regresaron. Le dijeron a la gente: “La tierra es muy fértil y los cultivos son abundantes!. Pero diez de los espías dijeron:”¡Las ciudades son muy fuertes, y la gente es gigante! ¡Si les atacamos, seguramente nos derrotarán y nos matarán!”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-06.jpg"><p>Inmediatamente Caleb y Josué, los otros dos espías, dijeron: “Es verdad que la gente de Canaán es alta y fuerte, ¡pero en verdad que podemos derrotarles! ¡Dios luchará por nosotros!”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-07.jpg"><p>Pero la gente no escuchó a Caleb y a Josué. Se enfadaron con Moisés y con Aarón y dijeron: “¿Por qué nos trajísteis a este horrible lugar? Estaríamos mucho mejor en Egipto que no aquí donde seremos muertos en batalla y nuestras mujeres y nuestros hijós serán hechos esclavos.” La gente quiso escoger a otro líder que los llevara de vuelta a Egipto.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/2160px/obs-es-14-08.jpg"><p>Dios se enojó mucho, y fue al Tabernáculo de Reunión. Dios dijo: “Puesto que os habéis rebelado contra mí, todo el pueblo tendrá que vagar por el desierto. Excepto Josué y Caleb, todo aquel que tenga veinte años o más, morirá allí y nunca entrará en la Tierra Prometida.”</p></section>
@@ -159,6 +159,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -184,10 +186,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

@@ -102,7 +102,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-03.jpg"><p>Después de que el pueblo pasara el Río Jordán, Dios le contó a Josué cómo atacar la poderosa ciudad de Jericó. El pueblo obedeció a Dios. Tal como Dios les dijo que hicieran, los soldados y sacerdotes marcharon alrededor de la ciudad de Jericó una vez al día durante seis días.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-04.jpg"><p>Entonces, el séptimo día los israelitas marcharon alrededor de la ciudad otras siete veces. Mientras marchaban alrededor de la ciudad por última vez, los soldados gritaron mientras los sacerdotes tocaron sus trompetas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-05.jpg"><p>¡Y los muros de la ciudad cayeron! Los israelitas destruyeron todo lo que había en la ciudad tal como Dios les había mandado. Ellos sólo perdonaron a Rahab y su familia, que pasaron a formar parte de los israelitas. Cuando el resto de los pueblos que vivían en Canaán oyeron que los israelitas habían destruido Jericó, se llenaron de temor de que los israelitas les atacaran también a ellos.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-06.jpg"><p>Dios había mandado a los israelitas que no hicieran un tratado de paz con ninguna tribu de Canaán. Pero una de las tribus cananeas, llamada "Gabaonitas" engañó a Josué diciéndole que eran de un lugar lejano de Canaán. Pidieron a Josué que hiciera un tratado de paz con ellos. Josué y los israelitas no preguntaron a Dios de donde eran los gabaonitas. Así que Josué hizo un tratado de paz con ellos.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-06.jpg"><p>Dios había mandado a los israelitas que no hicieran un tratado de paz con ninguna tribu de Canaán. Pero una de las tribus cananeas, llamada “Gabaonitas” engañó a Josué diciéndole que eran de un lugar lejano de Canaán. Pidieron a Josué que hiciera un tratado de paz con ellos. Josué y los israelitas no preguntaron a Dios de donde eran los gabaonitas. Así que Josué hizo un tratado de paz con ellos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-07.jpg"><p>Los israelitas se enfadaron cuando descubrieron que los gabaonitas les habían engañado, pero mantuvieron el tratado de paz que habían hecho con ellos porque había sido una promesa ante Dios. Un poco más tarde, los reyes de otras tribus de Canaán, los Amorreos, oyeron que los gabaonitas habían hecho un tratado de paz con los israelitas , así que combinaron sus ejércitos en un gran ejército y atacaron Gabaón. Los gabaonitas mandaron un mensaje a Josué pidiéndole ayuda.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-08.jpg"><p>Entonces Josué juntó el ejército israelita y marcharon toda la noche para llegar hasta los gabaonitas. Muy de mañana sorprendieron a los ejércitos amorreos y les atacaron.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-15-09.jpg"><p>Dios luchó por Israel aquel día. Sembró una gran confusión entre los cananeos y envió grandes piedras de granizo que mataron a muchos de los amorreos.</p></section>
@@ -157,6 +157,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -182,10 +184,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

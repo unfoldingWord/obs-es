@@ -99,7 +99,7 @@
             <section><h1>27. La Historia del Buen Samaritano.</h1><h3>Una historia de la Biblia en: Lucas 10:25-37</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-01.jpg"><p>Un día, un experto en la ley judía vino a Jesús para probarle diciendo: “Maestro, ¿qué debo hacer para heredar la vida eterna?” Jesús le contestó, “¿Qué está escrito en la ley de Dios?”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-02.jpg"><p>El experto en la ley contestó que la ley de Dios dice: “Amarás al Señor tu Dios con todo tu corazón, con toda tu alma, con todas tus fuerzas, con toda tu mente. Y amarás a tu prójimo como a tí mismo”. Jesús contestó: “¡Tienes razón! Haz eso y vivirás.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-03.jpg"><p>Pero el experto en la ley quería demostrar que era justo, así que preguntó:  “¿Quién es mi prójimo?”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-03.jpg"><p>Pero el experto en la ley quería demostrar que era justo, así que preguntó: “¿Quién es mi prójimo?”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-04.jpg"><p>Jesús contestó al experto en la ley, contándole una historia. “Hubo un Judío que tenía que viajar por el camino que va de Jerusalén a Jericó.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-05.jpg"><p>“Mientras viajaba, fue atacado por un grupo de ladrones. Ellos se llevaron todo lo que tenía, y le golpearon hasta dejarle medio muerto. Luego huyeron.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-06.jpg"><p>“Poco después, sucedió que pasó por el mismo camino un sacerdote Judío. Cuando este líder religioso vio al hombre al que habían robado y golpeado, se pasó al otro lado de la senda, ignoró al hombre que necesitaba ayuda, y siguió adelante.”</p></section>
@@ -107,7 +107,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-08.jpg"><p>“La siguiente persona en pasar por el camino fue un Samaritano. (Los samaritanos eran descendientes de judíos que se habían casado con gentes de otras naciones. Los samaritanos y los judíos se odiaban mutuamente). Pero cuando el Samaritano vio al judío, sintió una gran compasión por él. así que cuidó de él y vendó sus heridas.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-09.jpg"><p>“El Samaritano subió al hombre a su asno y le llevó a un mesón donde tuvo cuidado de él.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-10.jpg"><p>“Al día siguiente, el Samaritano tenía que continuar su viaje. Le dio algo de dinero a la persona encargada del mesón y dijo: ‘Cuídale, y si hay necesidad de más dinero, yo lo pagaré cuando vuelva.’”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-11.jpg"><p>Entonces Jesús preguntó al experto en la ley "Que piensas?", “¿Cuál de los tres hombres crees que fue el prójimo del hombre a quien robaron y golpearon?” Él contestó, “El que fue misericordioso con él.” Jesús le dijo : “Ve y haz tú lo mismo.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-27-11.jpg"><p>Entonces Jesús preguntó al experto en la ley “Que piensas?”, “¿Cuál de los tres hombres crees que fue el prójimo del hombre a quien robaron y golpearon?” Él contestó, “El que fue misericordioso con él.” Jesús le dijo : “Ve y haz tú lo mismo.”</p></section>
 <section><a href="../28/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
         </div>
@@ -155,6 +155,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -180,10 +182,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

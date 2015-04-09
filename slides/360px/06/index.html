@@ -102,7 +102,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-03.jpg"><p>Rebeca estuvo de acuerdo en dejar su familia y volver con el siervo a la casa de Isaac. Isaac se casó con ella tan pronto como llegó.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-04.jpg"><p>Despues de mucho tiempo, Abraham murió y todas las promesas que Dios le había hecho en el pacto fueron traspasadas a Isaac. Dios había prometido a Abraham que tendría innumerables descendientes, pero la esposa de Isaac, Rebeca, no podía tener hijos.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-05.jpg"><p>Isaac oró por Rebeca, y Dios le permitió quedar embarazada de mellizos. Los dos bebés peleaban el uno con el otro Mientras estaban en el vientre de Rebeca, por lo que Rebeca preguntó a Dios qué estaba sucediendo.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-06.jpg"><p>Dios le dijo a Rebeca: "Dos naciones vendrán de los dos hijos dentro de ti. Lucharán el uno contra el otro y el hijo mayor servirá al menor".</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-06.jpg"><p>Dios le dijo a Rebeca: “Dos naciones vendrán de los dos hijos dentro de ti. Lucharán el uno contra el otro y el hijo mayor servirá al menor”.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-06-07.jpg"><p>Cuando nacieron los niños de Rebeca, el hijo mayor salió pelirrojo y peludo y le pusieron por nombre Esau. El más pequeño salió agarrando el talón de Esaú, y le pusieron por nombre Jacob.</p></section>
 <section><a href="../07/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
@@ -151,6 +151,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -176,10 +178,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

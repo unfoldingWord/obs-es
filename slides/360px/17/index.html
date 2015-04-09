@@ -97,13 +97,13 @@
     <div class="reveal">
         <div class="slides">
             <section><h1>17. El Pacto de Dios con David</h1><h3>Una historia de la Biblia en: 1 Samuel 10; 15-19; 24; 31; 2 Samuel 5; 7; 11-12</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-01.jpg"><p></p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-01.jpg"><p>Saúl fue el primer rey de Israel. Era alto y bien parecido, como quería el pueblo. Saúl fue un buen rey los primeros años que gobernó sobre Israel. Pero entonces se fue volviendo un hombre malvado que no obedecía a Dios, por lo que Dios eligió a otra persona que un día sería rey en su lugar.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-02.jpg"><p>Dios escogió a un joven israelita llamado David para ser rey después de Saúl. David era un pastor de la ciudad de Belén. Rn diferentes ocasiones, mientras cuidaba las ovejas de su padre, David tuvo que matar tanto a un león como a un oso que habían atacado al rebaño. David era un hombre humilde y honrado que confiaba y obedecía a Dios.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-03.jpg"><p>David también llegó a ser un gran soldado y líder. Cuando David era aún joven, luchó contra un gigante llamado Goliat. Goliat era un soldado entrenado, muy fuerte, y que ¡medía casi tres metros de altol! Pero Dios ayudó a David a matar a Goliat y salvar a Israel. Después de esto, David ganó otras muchas victorias sobre los enemigos de Israel por lo que el pueblo le alababa.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-04.jpg"><p>Saúl tuvo celos del amor del pueblo hacia David. Saúl intentó matarle varias veces, por lo que David se escondió de Saúl. Un día, Saúl estaba buscando a David con la intención de matarle. Saúl fue a meterse a la misma cueva donde David se había escondido de Saúl, pero Saúl no le vio. David estaba ahora muy cerca de Saúl y podía haberle matado, pero no lo hizo. En vez eso David cortó un trozo del vestido de Saúl para probar así a Saúl que él no le mataría para hacerse rey.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-05.jpg"><p>Saúl murió en una batalla y David llegó a ser rey de Israel. Fue un buen rey, y la gente le quería. Dios bendijo a David y le hizo prosperar. David luchó muchas batallas y Dios le ayudó a derrotar a los enemigos de Israel. David conquistó Jerusalén y la hizo la capital. Durante el reinado de David, Israel se hizo poderosa y rica.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-06.jpg"><p>David quiso contruir un templo donde todos los israelitas adoraran a Dios y le ofrecieran sacrificios. Durante 400 años, la gente había adorado a Dios y ofrecido sacrificios en el Tabernáculo de Reunión que había hecho Moisés.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-07.jpg"><p>Pero Dios envió al profeta Natán a David con este mensaje: “Como eres un hombre de guerra, no construirás ese Templo para mí. Tu hijo lo hará. Pero te bendeciré mucho. "¡Uno de tus descendientes gobernará como rey sobre mi pueblo para siempre!". El único descendiente de David que podría gobernar para siempre era el Mesías” El Mesías era el Único escogido de Dios que salvará a la gente del mundo de su pecado.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-07.jpg"><p>Pero Dios envió al profeta Natán a David con este mensaje: “Como eres un hombre de guerra, no construirás ese Templo para mí. Tu hijo lo hará. Pero te bendeciré mucho.”¡Uno de tus descendientes gobernará como rey sobre mi pueblo para siempre!“. El único descendiente de David que podría gobernar para siempre era el Mesías” El Mesías era el Único escogido de Dios que salvará a la gente del mundo de su pecado.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-08.jpg"><p>Cuando David oyó estas palabras, inmediatamente agradeció y alabó a Dios porque había prometido a David tan gran honor y tantas bendiciones. David no sabía cuando haría Dios esas cosas. Pero para que sucedieran los israelitas tendrían que esperar mucho tiempo antes de la llegada del Mesías, casi 1.000 años.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-09.jpg"><p>David gobernó con justicia y fidelidad durante muchos años, y Dios le bendijo. No obstante, hacia el final de su vida pecó terriblemente contra Dios.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-17-10.jpg"><p>Un día, cuando todos los soldados de David estaban fuera de sus casas peleando batallas, hecho un vistazo fuera de su palacio y vio a una hermosa mujer bañándose. Su nombre era Betsabé.</p></section>
@@ -158,6 +158,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -183,10 +185,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

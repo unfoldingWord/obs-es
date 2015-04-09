@@ -99,12 +99,12 @@
             <section><h1>29. La historia del siervo despiadado</h1><h3>Una historia de la Biblia de: Mateo 18:21-35</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-01.jpg"><p>Un día Pedro le preguntó a Jesús: “Maestro, ¿cuántas veces debo perdonar a mi hermano cuando peca contra mí? ¿Más de siete veces?” Jesús dijo: “¡No siete veces, sino setenta veces siete!” Con esto Jesús quería decir que siempre debemos perdonar. Entonces Jesús contó esta historia.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-02.jpg"><p>Jesús dijo: “El reino de Dios se parece a un rey que quiso ajustar cuentas con sus siervos. Uno de sus tenía una deuda enorme, por una valor equivalente al salario de 200.000 años.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-03.jpg"><p>“Dado que el sirviente no iba a poder pagar la deuda, el rey dijo:  ‘Vended a este hombre y a su familia como esclavos para que pueda cobrar su deuda.’”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-03.jpg"><p>“Dado que el sirviente no iba a poder pagar la deuda, el rey dijo: ‘Vended a este hombre y a su familia como esclavos para que pueda cobrar su deuda.’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-04.jpg"><p>“El siervo cayó de rodillas delante del rey y dijo: ‘Por favor, se paciente conmigo, y yo pagaré todo lo que te debo.’ El rey sintió piedad por el siervo y por tanto canceló toda su deuda y le dejó marchar.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-05.jpg"><p>“Pero cuando el siervo salió de delante del rey, se encontró con otro siervo compañero que le debía el salario de cuatro meses. El siervo agarró a su compañero siervo y le dijo  ‘¡Págame el dinero  que me debes!’”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-05.jpg"><p>“Pero cuando el siervo salió de delante del rey, se encontró con otro siervo compañero que le debía el salario de cuatro meses. El siervo agarró a su compañero siervo y le dijo ‘¡Págame el dinero que me debes!’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-06.jpg"><p>“El compañero sirviente cayó de rodillas y dijo: ‘Por favor se paciente conmigo, te pagaré toda la cantidad que te debo.’ Pero en vez de ello el siervo mandó a la cárcel al compañero sirviente hasta que pudiera pagar la deuda.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-07.jpg"><p>“Otros siervos vieron lo que había pasado y quedaron muy disgustados. Fueron al rey y se lo contaron todo.”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-08.jpg"><p>“El rey llamó al siervo y le dijo:  ‘Tu, ¡siervo malvado! Te perdoné tus deudas porque me suplicaste. Tú deberías haber hecho lo mismo.’ El rey se enfadó tanto que mandó a la cárcel al siervo malvado hasta que devolviera toda su deuda.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-08.jpg"><p>“El rey llamó al siervo y le dijo: ‘Tu, ¡siervo malvado! Te perdoné tus deudas porque me suplicaste. Tú deberías haber hecho lo mismo.’ El rey se enfadó tanto que mandó a la cárcel al siervo malvado hasta que devolviera toda su deuda.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-29-09.jpg"><p>Entonces Jesús dijo: “Esto es lo que mi Padre celestial hará a todos vosotros si no perdonáis de corazón a vuestros hermanos.”</p></section>
 <section><a href="../30/index.html"><p>Siguiente capítulo</p></a></section>
             </div>
@@ -153,6 +153,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -178,10 +180,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

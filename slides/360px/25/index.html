@@ -102,7 +102,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-03.jpg"><p>Jesús contestó: “Escrito está en la palabra de Dios, ‘Las personas no solo necesitan pan para vivir, sino que necesitan toda Palabra que Dios habla!’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-04.jpg"><p>Entonces Satanás puso a Jesús en el punto más alto del Templo y dijo: “Si eres el Hijo de Dios, arrójate desde aquí, porque está escrito ‘Dios mandará a sus ángeles para que te sostengan y tus pies no tropiecen con las piedras.’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-05.jpg"><p>Pero Jesús contestó a Satáns sitando las Escrituras. Dijo: “En la Palabra de Dios Él manda a su pueblo: ‘No pruebes al Señor tu Dios.’”</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-06.jpg"><p>Entonces Satanás mostró a Jesús todos los reinos del mundo y su gloria y dijo:  “Te daré todo esto si te postras y me adoras.”</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-06.jpg"><p>Entonces Satanás mostró a Jesús todos los reinos del mundo y su gloria y dijo: “Te daré todo esto si te postras y me adoras.”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-07.jpg"><p>Jesús contestó: “¡Vete de mí, Satanás! En la palabra de Dios, Él manda a su pueblo: ‘Solo al Señor tu Dios adorarás y sólo a él servirás.’”</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-25-08.jpg"><p>Jesús no cayó en las tentaciones de Satanás, así que éste le dejó. Entonces vinieron ángeles y cuidaron a Jesús.</p></section>
 <section><a href="../26/index.html"><p>Siguiente capítulo</p></a></section>
@@ -152,6 +152,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -177,10 +179,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

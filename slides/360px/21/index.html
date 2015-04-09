@@ -104,7 +104,7 @@
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-05.jpg"><p>Por medio del profeta Jeremías, Dios prometió que establecería un Nuevo Pacto, pero no como el Pacto que Dios había hecho con Israel en Sinaí. En el Nuevo Pacto Dios escribiría Su ley en los corazones de la gente, la gente conocería a Dios personalmente, ellos serían Su pueblo, y Dios perdonaría sus pecados. El Mesías comenzaría ese Nuevo Pacto.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-06.jpg"><p>Los profetas de Dios también dijeron que el Mesías sería profeta, sacerdote y rey. Un profeta es una persona que oye las palabras de Dios y proclama esas palabras de Dios a las personas. El Mesías que Dios había pormetido enviar sería el profeta perfecto.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-07.jpg"><p>Los sacerdotes israelitas hacían sacrificios a Dios en nombre de las personas como sustitución por el castigo de sus pecados. Los sacerdotes tambien oraban a Dios por las personas. El Mesías sería el perfecto sumo sacerdote que se ofrecería a sí mismo como perfecto sacrificio a Dios.</p></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-08.jpg"><p>Un rey es alguien que gobierna sobre un reino y juzga a las personas. El Mesías sería un rey perfecto que se sentaría en el trono de su antecesor David. Él reinará sobre todo el mundo para siempre, y  juzgará siempre honestamente y tomará en todo momento las decisiones correctas.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-08.jpg"><p>Un rey es alguien que gobierna sobre un reino y juzga a las personas. El Mesías sería un rey perfecto que se sentaría en el trono de su antecesor David. Él reinará sobre todo el mundo para siempre, y juzgará siempre honestamente y tomará en todo momento las decisiones correctas.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-09.jpg"><p>Los profetas predijeron otras muchas cosas acerca del Mesías. El profeta Malaquías predijo que un gran profeta vendría antes de la llegada del Mesías. El profeta Isaías profetizó que el Mesías nacería de una virgen. El profeta Miqueas dijo que nacería en la ciudad de Belén.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-10.jpg"><p>El profeta Isaías dijo que el Mesías viviría en Galilea, que consolaría los corazones quebrantados de la gente, que proclamaría la libertad a los cautivos y daría liberación a los prisioneros. También predijo que el Mesías sanaría las enfermedades de la gente, y a los que no podía oír, ver, hablar, o andar.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-21-11.jpg"><p>El profeta Isaías también profetizó que el Mesías sería odiado sin razón y rechazado. Otros porfetas predijeron que la gente que mataría al Mesías sortearía sus vestidos y que un amigo le traicionaría. El profeta Zacarías predijo que al amigo le pagarían treinta monedas de plata como pago por traicionar al Mesías.</p></section>
@@ -159,6 +159,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -184,10 +186,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>

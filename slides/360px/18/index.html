@@ -97,7 +97,7 @@
     <div class="reveal">
         <div class="slides">
             <section><h1>18. El Reino Dividido</h1><h3>Una historia de la Biblia en: 1 Reyes 1-6; 11-12</h3><div class="uwchecking"><a href="https://unfoldingword.org/quality/" target="_blank"><img src="https://api.unfoldingword.org/obs/jpg/1/checkinglevels/uW-Level1-64px.png" /></a></section>
-<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-18-01.jpg"><p>Después de muchos años, David murió y su hijo Salomon comenzó a gobernar sobre Israel. Dios le habló a Salomón y le preguntó que era lo que más quería. Cuando Salomón contestó "sabiduría", a Dios le agradó y le hizo el hombre más sabio del mundo. Salomón aprendió muchas cosas y fue un juez muy sabio. Dios le hizo también muy rico.</p></section>
+<section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-18-01.jpg"><p>Después de muchos años, David murió y su hijo Salomon comenzó a gobernar sobre Israel. Dios le habló a Salomón y le preguntó que era lo que más quería. Cuando Salomón contestó “sabiduría”, a Dios le agradó y le hizo el hombre más sabio del mundo. Salomón aprendió muchas cosas y fue un juez muy sabio. Dios le hizo también muy rico.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-18-02.jpg"><p>Salomón construyó en Jerusalén el Templo que su padre David había planeado y para el que había preparado materiales. El pueblo ahora adoraba a Dios y le ofrecía sacrificios en el Templo en vez de en el Tabernáculo de Reunión, . Dios vino y se hizo presente en el Templo y vivió allí con Su pueblo.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-18-03.jpg"><p>Pero Salomón amó a mujeres de otros países. Desobedeció a Dios casándose con muchas mujeres, ¡casi 1.000! Muchas de esas mujeres venían de países extranjeros y trajeron consigo sus dioses y continuaban adorándoles. Cuando Salomon fue viejo, adoró a sus dioses.</p></section>
 <section data-background="https://api.unfoldingword.org/obs/jpg/1/es/360px/obs-es-18-04.jpg"><p>Dios se enojó mucho con Salomón y, como castigo por la infidelidad de Salomón, prometió dividr la nación de Israel en dos reinos después de la muerte de Salomón.</p></section>
@@ -157,6 +157,8 @@
 
         <script>
 
+            var flyOutNotes;
+
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -182,10 +184,12 @@
                     { src: '../../js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../../js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../../js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../../js/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../js/obs-notes.js', async: true, callback: function() {
+                        flyOutNotes = new FlyOutNotes();
+                        window.addEventListener('hashchange', function() { flyOutNotes.loadNotes() });
+                    } }
                 ]
             });
-
         </script>
 
     </body>
